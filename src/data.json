@@ -1,0 +1,77 @@
+{ "bar": [
+    {
+        "id": 1,
+        "name": "Mojito Tradicional",
+        "price": 5.00,
+        "category": "Bar",
+        "quantity": 0
+        },
+        {
+        "id": 2,
+        "name": "Pina Colada",
+        "price": 5.00,
+        "category": "Bar",
+        "quantity": 0
+        },
+        {
+        "id": 3,
+        "name": "Ramazzoti",
+        "price": 4.00,
+        "category": "Bar",
+        "quantity": 0
+        },
+        {
+        "id": 4,
+        "name": "Agua 500ml",
+        "price": 10.00,
+        "category": "Bar",
+        "quantity": 0
+        },
+        {
+        "id": 5,
+        "name": "Bebida 500ml",
+        "price": 10.00,
+        "category": "Bar",
+        "quantity": 0
+        }
+],
+
+ "rest": [
+        {
+        "id": 6,
+        "name": "Aros de Cebolla",
+        "price": 4.00,
+        "category": "Rest",
+        "quantity": 0
+        },
+        {
+        "id": 7,
+        "name": "Sandwich de Pollo",
+        "price":8.00,
+        "category": "Rest",
+        "quantity": 0
+        },
+        {
+        "id": 8,
+        "name": "Hamburguesa Americana",
+        "price": 7.00,
+        "category": "Rest",
+        "quantity": 0
+        },
+        {
+        "id": 9,
+        "name": "Hamburguesa Tradicional",
+        "price": 1.50,
+        "category": "Rest",
+        "quantity": 0
+        },
+        {
+        "id": 10,
+        "name": "Papas Fritas",
+        "price":7.00,
+        "category": "Rest",
+        "quantity": 0
+        }
+]
+
+}
