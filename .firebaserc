@@ -1,6 +1,7 @@
 {
   "projects": {
-    "burger queen": "burger-queen-bebf4"
+    "SaborCH": "sabor-chileno",
+    "default": "sabor-chileno"
   },
   "targets": {}
 }

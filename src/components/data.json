@@ -1,0 +1,148 @@
+{
+    "productos":[
+        {
+            "id":"1",
+            "name":"Pastel de Choclo",
+            "description":"Pasta de choclo acompañado con un pino de carne, pollo y huevo",
+            "type":"Menu",
+            "price": "4.000",
+            "img": "https://imgur.com/j8j22mE.png"
+        },
+        {
+            "id":"2",
+            "name":"Humita",
+            "description":"Pasta de choclo envuelta en hojas de choclo",
+            "type":"Menu",
+            "price":"1.500",
+            "img": "https://imgur.com/8UigyjC.png"
+        },
+        {
+            "id":"3",
+            "name":"Chorrillana",
+            "description":"Papas fritas acompañado con tiritas de lomo, chorizo, cebolla caramelizada y huevo frito",
+            "type":"Menu",
+            "price":"6.000",
+            "img": "https://imgur.com/pgobIPd.png"
+        },
+        {
+            "id":"4",
+            "name":"Sandwich Italiano",
+            "description":"Pan amasado con carne a eleccion, palta, tomate y mayonesa",
+            "type":"Menu",
+            "price": "4.000",
+            "img": "https://imgur.com/5cs6Anm.png"
+        },
+        {
+            "id":"5",
+            "name":"Sandwich vegetariano",
+            "description":"Pan amasado con tomate, champiñon, palta, choclo y mayonesa",
+            "type":"Menu",
+            "price": "3.500",
+            "img": "https://imgur.com/C5fnWdC.png"
+        },
+        {
+            "id":"6",
+            "name":"Completo dinamico",
+            "description":"Pan de completo con vienesa, palta, tomate, salsa americana, chucrut, salsa verde y mayonesa",
+            "type":"Menu",
+            "price": "1.500",
+            "img": "https://imgur.com/n6cwwBH.png"
+        },
+        {
+            "id":"7",
+            "name":"Completo Italiano",
+            "description":"Pan de completo con vianesa, palta, tomate y mayonesa",
+            "type":"Menu",
+            "price": "1.500",
+            "img": "https://imgur.com/u34I2co.png"
+        },
+        {
+            "id":"8",
+            "name":"Papas fritas individual",
+            "description":"200 grs de papas fritas",
+            "type":"Menu",
+            "price": "1.500",
+            "img": "https://imgur.com/23eZnE0.png"
+        },
+        {
+            "id":"9",
+            "name":"Papas fritas familiar",
+            "description":"600 grs de papas fritas",
+            "type":"Menu",
+            "price": "4.000",
+            "img": "https://imgur.com/LcP6rFk.png"
+        },
+        {
+            "id":"10",
+            "name":"Mote con huesillos",
+            "description":"Mote de trigo acompañado de jugo acaramelado de durazno y duraznos deshidratados",
+            "type":"Menu",
+            "price": "2.000",
+            "img": "https://imgur.com/uNpmdcx.png"
+        },
+        {
+            "id":"11",
+            "name":"Bebida express",
+            "description":"Bebidas disponibles: Coca-Cola, Fanta, Sprit",
+            "type":"Bebestible",
+            "price": "500",
+            "img": "https://imgur.com/Y6nOj9N.jpg"
+        },
+        {
+            "id":"12",
+            "name":"Bebida 500 ml",
+            "description":"Bebidas disponibles: Coca-Cola, Fanta, Sprit",
+            "type":"Bebestible",
+            "price": "1.000",
+            "img": "https://imgur.com/whwIItw.jpg"
+        },
+        {
+            "id":"13",
+            "name":"Jugo natural",
+            "description":"Sabores: Piña, Frutilla, Frambueza, Mango, Durazno",
+            "type":"Bebestible",
+            "price": "1.500",
+            "img": "https://imgur.com/czfodLW.png"
+        },
+        {
+            "id":"14",
+            "name":"Cafe",
+            "description":"Cafe",
+            "type":"Bebestible",
+            "price": "1.000",
+            "img": "https://imgur.com/YvSqHbx.png"
+        },
+        {
+            "id":"15",
+            "name":"2 Completos italianos mas bebida express",
+            "description":"",
+            "type":"Promociones",
+            "price": "3.000",
+            "img": ""
+        },
+        {
+            "id":"16",
+            "name":"Completo italiano, con papas fritas y bebida",
+            "description":"",
+            "type":"Promociones",
+            "price": "4.000",
+            "img": ""
+        },
+        {
+            "id":"17",
+            "name":"Sandwich italiano, con papas fritas y bebida",
+            "description":"",
+            "type":"Promociones",
+            "price": "5.000",
+            "img": ""
+        },
+        {
+            "id":"18",
+            "name":"2 Sandwich, con papas fritas y 2 bebida",
+            "description":"",
+            "type":"Promociones",
+            "price": "9.000",
+            "img": ""
+        }
+    ]
+}
