@@ -6,15 +6,15 @@ const Home = () => {
 
   return (
     <>
-      <section className="w-screen h-screen bg-emerald-50">
-        <div className="flex justify-center ">
-          <img src={logo} alt="" className="w-3/4 " />
+      <section className="w-screen h-screen border-2 border-lime-500 bg-[#fffee6]">
+        <div className="flex justify-center items-center h-2/4">
+          <img src={logo} alt="" className="md:h-[40%] sm:h-[20%]  " />
         </div>
-        <div className="w-full flex flex-col items-center p-5 gap-5 ">
+        <div className="w-full h-2/4 border-3 border-red-600 flex flex-col items-center p-5 gap-5 ">
         <Link to="/waiter">
           <button
             type="button"
-            className="btn btn-danger font-weight: 500 shadow-md bg-[#feab6b] rounded-md hover:bg-[#e76f3d] text-white"
+            className="p-2 font-weight: 500 shadow-md bg-[#ff8000] rounded-md hover:bg-[#e76f3d] text-white"
           >
             Acceso Garzon
           </button>
@@ -22,7 +22,7 @@ const Home = () => {
           <Link to="/kitchen">
             <button
               type="button"
-              className="btn btn-info p-2  font-weight: 500 shadow-md bg-indigo-500 rounded-md hover:bg-indigo-700 text-white"
+              className=" p-2  font-weight: 500 shadow-md bg-[#ff0080] rounded-md hover:bg-indigo-700 text-white"
             >
               Acceso Cocina
             </button>

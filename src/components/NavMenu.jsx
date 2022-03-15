@@ -35,21 +35,21 @@ const NavMenu = () => {
         <div className="space-x-6 flex justify-center h-10">
           <button
             type="button"
-            className="p-2  font-weight: 500 shadow-md bg-[#feab6b] rounded-md active:bg-[#e76f3d] text-white"
+            className="p-2  font-weight: 500 shadow-md bg-[#ff8000] rounded-md active:bg-[#e76f3d] text-white"
             onClick={() => filterData("Menu")}
           >
             Menu principal
           </button>
           <button
             type="button"
-            className="p-2  font-weight: 500 shadow-md bg-[#feab6b] rounded-md active:bg-[#e76f3d] text-white"
+            className="p-2  font-weight: 500 shadow-md bg-[#ff8000] rounded-md active:bg-[#e76f3d] text-white"
             onClick={() => filterData("Bebestible")}
           >
             Bebestible
           </button>
           <button
             type="button"
-            className="p-2  font-weight: 500 shadow-md bg-[#feab6b] rounded-md active:bg-[#e76f3d] text-white"
+            className="p-2  font-weight: 500 shadow-md bg-[#ff8000] rounded-md active:bg-[#e76f3d] text-white"
             onClick={() => filterData("Promociones")}
           >
             Promociones
@@ -58,21 +58,21 @@ const NavMenu = () => {
         <div className="grid grid-cols-[2fr,1fr] gap-4 p-4 h-auto ">
           <section className="grid sm:grid-rows-3 content-between md:grid-cols-3 gap-3	">
             {menuItems.map((producto, index) => (
-              <div className=" border-2 rounded h-full " key={index}> {/*key se debe incluir para crear listas de elementos, ayuda a identificar si los items han cambiado */}
+              <div className=" border-1 border-[#008c82] bg-[#004d47] rounded h-full shadow-md text-white" key={index}> {/*key se debe incluir para crear listas de elementos, ayuda a identificar si los items han cambiado */}
                 <div className="flex justify-center ">
-                  <h1 className="">{producto.name}</h1>
+                  <h1 className="py-1">{producto.name}</h1>
                 </div>
                 <div className="grid sm:grid-cols-4 md:grid-col-9  p-1 gap-2">
-                  <div className="sm:col-span-2   ">
-                    <img className="sm:w-" src={producto.img} />
+                  <div className="sm:col-span-2 ">
+                    <img className="rounded shadow-md" src={producto.img} />
                   </div>
-                  <div className="sm:col-span-2   divide-y divide-orange-600">
-                    <p className="">{producto.description}</p>
-                    <p className="">${producto.price}</p>
+                  <div className="sm:col-span-2   divide-y divide-[#eeee02]">
+                    <p className="pb-2">{producto.description}</p>
+                    <p className="flex justify-center pt-2"><strong>${producto.price} </strong></p>
                     
                   </div>
                   <div className="flex sm:col-start-4 justify-center sm:px-10 md:px-8">
-                    <button onClick={()=> globalContext.addCarrito(producto)} className="flex items-end justify-end sm:px-4 md:p-1   font-weight: 500 shadow-md bg-indigo-500 rounded-md hover:bg-indigo-700 text-white">
+                    <button onClick={()=> globalContext.addCarrito(producto)} className="flex items-end justify-end sm:px-4 md:px-2 py-1   font-weight: 500 shadow-md bg-[#008e00] rounded-md hover:bg-[#00c600] text-white">
                       Agregar
                     </button>
                   </div>
@@ -81,7 +81,7 @@ const NavMenu = () => {
             ))}
           </section>
 
-          <div className="border-2 rounded h-min w-full ">
+          <div className=" h-min w-full ">
             <ShoppingCart/>
           </div>
         </div>

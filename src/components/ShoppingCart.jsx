@@ -39,12 +39,12 @@ const ShoppingCart = () => {
 
   return (
     <>
-      <form onSubmit={onSubmit}>
-        <h1 className="flex justify-center text-lg pb-2">Resumen de compras</h1>
+      <form onSubmit={onSubmit} className="bg-[#004d47] rounded">
+        <h1 className="flex justify-center text-lg pb-2 text-white pt-1">Resumen de compras</h1>
         <div>
           {globalContext.products.resumeOrder.map((dish) => (
-              <div key={dish.id} className="flex justify-center p-2 h-24">
-                <div className="w-full grid grid-cols-10 border-1 border-solid rounded-md border-slate-300 shadow-md 	">
+              <div key={dish.id} className="flex justify-center p-2 h-24   text-black">
+                <div className="w-full grid grid-cols-10 border-1 border-solid rounded-md bg-white shadow-md 	">
                   <div className=" col-span-8 p-2 space-y-2">
                     <h1>{dish.name}</h1>
                     <h1>${dish.price}</h1>
@@ -83,12 +83,12 @@ const ShoppingCart = () => {
           ))}
         </div>
         <div>
-          <h2>Total ${totalOrder}</h2>
+          <h2 className="text-white px-2">Total ${totalOrder}</h2>
         </div>
        <div className="flex justify-end p-4">
           <button
             type="submit"
-            className=" p-2 sm:font-weight: 200 md:font-weight: 500 shadow-md bg-[#feab6b] rounded-md hover:bg-[#e76f3d] text-white"
+            className=" p-2 sm:font-weight: 200 md:font-weight: 500 shadow-md bg-[#008e00] rounded-md hover:bg-[#00c600] text-white"
             onClick= {onSubmit}
          >
             Tomar pedido

@@ -2,15 +2,49 @@ import React, { useContext } from "react";
 import Modal from "./Modal";
 import CustomerData from "./CustomerData";
 import NavMenu from "./NavMenu";
-import {ContextProducts} from '../App'
+import { ContextProducts } from "../App";
+import NotificationPush from "./NotificationPush";
+import { Link } from "react-router-dom";
+
+
 
 const Waiter = () => {
-
   const globalContext = useContext(ContextProducts);
+  const changeState = () => {
+    globalContext.setStateModalEntry(false);
+    globalContext.setStateModal(false)
+  }
 
   return (
     <>
-      <Modal state={globalContext.stateModal} changeState={globalContext.setStateModal}>
+      <Modal
+        title="Selecciona una opcion"
+        state={globalContext.stateModalEntry}
+        changeState={globalContext.setStateModalEntry}
+      >
+        <section className="">
+          <div className="grid  justify-center gap-2 ">
+            <button
+              onClick={() => 
+                globalContext.setStateModal(true)}
+              type="button"
+              className="w-auto btn btn-danger font-weight: 500 shadow-md bg-[#ff8000] rounded-md hover:bg-[#ff3d00] text-white"
+            >
+              Tomar Pedido
+            </button>
+            <Link to="/ordersOk">
+            <button className=" btn btn-info p-2  font-weight: 500 shadow-md bg-[#ff0080] rounded-md hover:bg-[#db005c] text-white">
+              Pedidos por entregar
+            </button>
+            </Link>
+          </div>
+        </section>
+      </Modal>
+      <Modal
+        title="Ingreso de pedido"
+        state={globalContext.stateModal}
+        changeState={globalContext.setStateModal}
+      >
         <form>
           <section className="flex items-center flex-col gap-4">
             <div className="space-y-2">
@@ -39,26 +73,27 @@ const Waiter = () => {
             </div>
 
             <button
-              onClick={() => globalContext.setStateModal(false)}
+              onClick={() => changeState()}
               type="button"
-              className="p-2  font-weight: 500 shadow-md bg-indigo-500 rounded-md hover:bg-indigo-700 text-white"
+              className="p-2  font-weight: 500 shadow-md bg-[#ff8000]  rounded-md hover:bg-[#ff3d00]
+
+              text-white"
             >
               Ingresar
             </button>
           </section>
         </form>
       </Modal>
-      <section className="bg-emerald-50">
+      <section className="bg-[#fffee6]">
         <CustomerData name={globalContext.name} number={globalContext.table} />
-
+        <NotificationPush state={globalContext.notification} changeState={globalContext.setNotification}/>
         <div className="flex justify-center gap-2 space-x-3 w-screen">
           <NavMenu />
         </div>
-
-        
       </section>
     </>
   );
 };
 
-export default Waiter;
+export default Waiter; 
+

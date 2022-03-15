@@ -1,13 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
+  doc,
   collection,
   onSnapshot,
   orderBy,
-  query
+  query,
+  updateDoc
 } from "firebase/firestore";
 import db from "../../firebase";
+import { ContextProducts } from "../../App";
+
 
 const Kitchen = () => {
+  const globalContext = useContext(ContextProducts);
+
   const [order, setOrder] = useState([]);
 
   useEffect(() => {
@@ -31,6 +37,14 @@ const Kitchen = () => {
     return e.status === "Pendiente";
   });
 
+  const changeStatus = async (id) => {
+    const statusCook = doc(db, "orders", id);
+    await updateDoc(statusCook, {
+      status: "Finalizado"
+    })
+    console.log("listeilor")
+  }
+
   return (
     <section className="w-screen h-screen bg-gray-300 ">
       <h1 className="flex justify-center text-2xl">Resumen de pedidos</h1>
@@ -51,7 +65,10 @@ const Kitchen = () => {
             <p><strong>Total:  </strong> $ {order.totalAmount}</p>
             <p><strong>Estado: </strong> {order.status}</p>
             <div className="flex justify-center mt-2">
-            <button className="p-1 font-weight: 500 shadow-md bg-indigo-500 rounded-md hover:bg-indigo-700 text-white">Pedido listo</button>
+            <button 
+            onClick={() => changeStatus(order.id)}
+            className="p-1 font-weight: 500 shadow-md bg-indigo-500 rounded-md hover:bg-indigo-700 text-white">Pedido listo</button>
+
             </div>
           </div>
         ))}

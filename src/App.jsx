@@ -5,14 +5,19 @@ import Home from "./components/Home";
 import Waiter from "./components/Waiter";
 import Kitchen from "./components/Kitchen/Kitchen";
 import data from "./components/data.json";
+import OrdersOk from "./components/Kitchen/OrdersOk"
 
 const contentMenu = data;
 export const ContextProducts = React.createContext(); 
 
 function App() { 
-  const [stateModal, setStateModal] = useState(true); 
+  const [stateModalEntry, setStateModalEntry] = useState(true); 
+  const [stateModal, setStateModal] = useState(false); 
   const [name, setName] = useState("");
   const [table, setTable] = useState("");
+  const [notification, setNotification] = useState(false)
+
+  
 
   const [products, setProducts] = useState({
     dataMenu: contentMenu,
@@ -58,16 +63,20 @@ function App() {
   };
 
   const totalOrderAmount = products.resumeOrder
-    .reduce((total, dish) => (total = dish.price * dish.count), 0) 
+    .reduce((total, dish) => (total = total + dish.price * dish.count), 0) 
     .toFixed(3); 
 
   const allProps = {
+    stateModalEntry,
+    setStateModalEntry,
     stateModal,
     setStateModal,
     name,
     setName,
     table,
     setTable,
+    notification,
+    setNotification,
     products,
     addCarrito,
     removeFromOrder,
@@ -82,6 +91,7 @@ function App() {
         <Route path="/" element={<Home />} /> 
         <Route path="/waiter" element={<Waiter />} />
         <Route path="/kitchen" element={<Kitchen />} />
+        <Route path="/ordersOk" element={<OrdersOk />} />
       </Routes>
     </ContextProducts.Provider>
   );

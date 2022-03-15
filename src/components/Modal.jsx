@@ -3,15 +3,16 @@ import styled from "styled-components";
 import { ContextProducts } from "../App";
 
 
-const Modal = ({ children, state }) => {
+const Modal = ({title, children, state }) => {
   const globalContext = useContext(ContextProducts);
   return (
     <>
       {state && (
         <Overlay>
-          <ContenedorModal>
+          <ContenedorModal className="sm:w-80">
             <EncabezadoModal>
-              <h3>Ingreso de pedido</h3>
+              
+              <h1 className=" md:text-xl "><strong>{title} </strong></h1>
             </EncabezadoModal>
             <BotonCerrar onClick={() => globalContext.setStateModal(false)}>
               <svg
@@ -48,7 +49,7 @@ const Overlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  background: rgb(236, 253, 245);
+  background: rgb(255,254,230);
   padding: 40px;
   display: flex;
   align-items: center;
@@ -57,7 +58,7 @@ const Overlay = styled.div`
 
 
 const ContenedorModal = styled.div`
-  width: 60vw;
+  width: 35vw;
   min-height: 100px;
   background: #fff;
   position: relative;
@@ -65,6 +66,7 @@ const ContenedorModal = styled.div`
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 20px;
 `;
+
 const EncabezadoModal = styled.div`
   display: flex;
   align-items: center;
